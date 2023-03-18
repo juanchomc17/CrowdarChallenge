@@ -1,0 +1,84 @@
+#This TXT is going to show the test cases from this script.
+
+Nombre del caso: test_negative_login
+Objetivo: Validar que las siguientes combinaciones de credenciales no van a iniciar sesion, y mostraran errores esperados.
+Precondiciones: El usuario ingresara las siguientes combinaciones:Username:"standard_user", Password:"incorrectPassword". Username:"locked_out_user", Password:"incorrectPassword", Username:"problem_user", Password:"incorrectPassword",
+                Username:"performance_glitch_user", Password:"incorrectPassword", Username:"", Password:"", Username:"", Password:"incorrectPassword",  Username:"standard_user", Password:"",
+                Username:"locked_out_user", Password:"secret_sauce"
+Pasos:
+1-El usuario ingresa las siguientes combinaciones:Username:"standard_user", Password:"incorrectPassword". Username:"locked_out_user", Password:"incorrectPassword", Username:"problem_user", Password:"incorrectPassword",
+Username:"performance_glitch_user", Password:"incorrectPassword".
+Resultado esperado: No iniciara sesion y arrojara un error diciendo: "Epic sadface: Username and password do not match any user in this service"
+2-El usuario ingresa las siguientes combinaciones:Username:"", Password:"". Username:"", Password:"incorrectPassword".
+Resultado esperado: No iniciara sesion y arrojara un error diciendo: "Epic sadface: Username is required"
+3-El usuario ingresa con la siguiente combinacion: Username:"standard_user", Password:"".
+Resultado esperado: No iniciara sesion y arrojara un error diciendo: "Epic sadface: Password is required".
+4-El usuario ingresa con la siguiente combinacion: Username:"locked_out_user", Password:"secret_sauce".
+Resutlado esperado: No iniciara sesion y arrojara un error diciendo: "Epic sadface: Sorry, this user has been locked out."
+
+Nombre del caso: test_problem_user
+Objetivo: Validar que el usuario pueda iniciar sesion, agregar un item al carrito, y al darle el btn Remover validar que no esta removiendo el item.
+Precondiciones: Que el usuario ingrese con las siguientes credenciales: Username:"problem_user",Password:"secret_sauce"
+Pasos:
+1-El usuario ingresa las credenciales y apreta el boton de login.
+Resultado esperado: Iniciar sesion correctamente.
+2-El usuario clickea en "Add to cart" en el item "Sauce Labs backpack"
+Resutlado esperado: Se cargara 1 item a Carrito de Compras y el boton de "Add to Cart" cambiara a "Remove"
+3_El usuario clickea en "Remove" en el item "Sauce Labs backpack"
+Resutlado esperado: No se removera el item previamente cargado y el boton "Remove" quedara fijo.
+
+Nombre del caso:test_fail_login
+Objetivo: Crear un caso donde el script falle intencionalmente.Cargar credenciales erroneas y verificar que la URL haya cambiado a la Website si las credenciales serian las correctas.
+Precondiciones: El usuario ingresara con las siguientes credenciales: username:"standard_user", Password:"".
+Pasos:
+1-El usuario ingresa las credenciales y aprieta el boton de login.
+Resultado esperado: Que el usuario no pueda iniciar sesion y aparezca un error diciendo:"Epic sadface: Password is required"
+2-Verificar si la URL cambio a "https://www.saucedemo.com/inventory.html"
+Resultado esperado: No va a cambiar la URL ya que las credenciales no loguearon y fallara el script.
+
+Nombre del caso:test_positive_login
+Objetivo:Verificar que con las credenciales correctas se pueda iniciar sesion y verificar que existe el boton "Add to Cart".
+Precondiciones: Que el usuario ingrese las siguientes credenciales:Username:"standard_user", Password: "secret_sauce"
+Pasos:
+1-El usuario ingresa las credenciales y aprieta el boton de login.
+Resultado esperado: El usuario podra ingresar sesion de forma correcta.
+2-El usuario verifica que existe el boton "Add to cart" en el item backpack.
+Resultado esperado: El boton existe, por ende funciono el logueo.
+
+Nombre del caso:test_positive_add
+Objetivo: Verificar que el usuario pueda ingresar sesion, agregar 2 items al carrito de compra, cargar nombre, apellido y codigo postal. Verificar que la compra se haya completado.
+Precondiciones:Que el usuario ingrese las siguientes credenciales:Username:"standard_user", Password: "secret_sauce". Debe agregar al carrito el item "backpack" y el "bike lights". El nombre, apelllido y codigo postal deben ser: juan, munoz y 7000.
+Pasos:
+1-1-El usuario ingresa las credenciales y aprieta el boton de login.
+Resultado esperado: El usuario podra ingresar sesion de forma correcta.
+2-El usuario debe darle click a al boton "Add to Cart" en los productos "Backpack" y "Bike Lights"
+Resultado esperado: El Carrito de compras tendra 2 objetos y los botones de "add to cart" cambiaran a "Remove"
+3-El usuario debe dar click en el Carrito de compras, se encuentra arriba a la derecha de la pagina.
+Resultado esperado: Abrira una nueva URL donde encontraras los 2 objetos que agegaste al carrito.
+4-El usuario debe dar click en el boton Checkout.
+Resultado Esperado:Cambiara la URL y apareceran 3 inputs para cargar nombre, apellido y codigo postal.
+5-El usuario ingresa nombre, apellido y codigo postal. Y le da click al boton Continuar.
+Resultado esperado: Se cargaran los datos, se aber una nueva URL, donde aparecen los productos que agergaste, los costos y tus datos previamente cargados.
+6-El usuario le da click al boton Finish.
+Resultado esperado:Se abre una nueva URL, y aparece un cartel diciendo:"Thank you for your order!" y se completa la compra.
+
+Nombre del caso:test_negative_add
+Objetivo: Verificar que el usuario pueda ingresar sesion, agregar 2 items al carrito de compra, y validar combinaciones de nombres, apellidos y codigo postal para analizar comportamiento del carrito de compras.
+Precondiciones:Que el usuario ingrese las siguientes credenciales:Username:"standard_user", Password: "secret_sauce". Debe agregar al carrito el item "backpack" y el "bike lights".
+               El usuario debe ingresar las siguientes combinaciones de nombres, apellido y codigo postal: nombre:"", apellido:"munoz", codigo postal:"7000". nombre:"", apellido:"", codigo postal:"7000". nombre:"", apellido:"", codigo postal:"".
+               nombre:"juan", apellido:"", codigo postal:"7000" . nombre:"juan", apellido:"", codigo postal:"". nombre:"juan", apellido:"munoz", codigo postal:"".
+Pasos:
+1-El usuario ingresa las credenciales y le da click a login.
+Resultado esperado: El usuario ingresara sesion correctamente.
+2-El usuario debe darle click a al boton "Add to Cart" en los productos "Backpack" y "Bike Lights"
+Resultado esperado: El Carrito de compras tendra 2 objetos y los botones de "add to cart" cambiaran a "Remove"
+3-El usuario debe dar click en el Carrito de compras, se encuentra arriba a la derecha de la pagina.
+Resultado esperado: Abrira una nueva URL donde encontraras los 2 objetos que agegaste al carrito.
+4-El usuario debe dar click en el boton Checkout.
+Resultado esperado:Cambiara la URL y apareceran 3 inputs para cargar nombre, apellido y codigo postal.
+5-El usuario ingresara las siguientes combinaciones y dara click en continuar: nombre:"", apellido:"munoz", codigo postal:"7000". nombre:"", apellido:"", codigo postal:"7000". nombre:"", apellido:"", codigo postal:"".
+Resultado esperado: Aparecera un error en forma de mensaje diciendo: "Error: First Name is required"
+6-El usuario ingresara las siguientes combinaciones y dara click en continuar: nombre:nombre:"juan", apellido:"", codigo postal:"" . nombre:"juan", apellido:"", codigo postal:"7000".
+Resultado esperado: Aparece un error en forma de mensaje diciendo: "Error: Last Name is required"
+7-El usuario ingresara las siguientes combinaciones y dara click en continuar: nombre:"juan", apellido:"munoz", codigo postal:""
+Resultado Esperado: Aparecera un error en forma de mensaje diciendo: "Error: Postal Code is required"

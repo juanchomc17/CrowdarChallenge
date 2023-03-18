@@ -72,24 +72,3 @@ class TestNegativeScenario:
             print("This user has issues on the Remove BTN")
         else:
             print("This user has no issues on the Remove BTN")
-
-    @pytest.mark.login
-    @pytest.mark.negative
-    @pytest.mark.parametrize("username, passwords", [("performance_glitch_user", "secret_sauce")])
-    def test_glitched_user(self, driver, username, passwords):
-        # Open Browser with URL
-        driver.get("https://www.saucedemo.com/")
-        driver.maximize_window()
-        # Get locators
-        username_locator = driver.find_element(By.XPATH, "//input[@id='user-name']")
-        password_locator = driver.find_element(By.XPATH, "//input[@id='password']")
-        btn_login = driver.find_element(By.XPATH, "//input[@id='login-button']")
-
-        # Input credentials
-        username_locator.send_keys(username)
-        time.sleep(1)
-        password_locator.send_keys(passwords)
-        time.sleep(1)
-        btn_login.click()
-
-        #VER TIEMPOS DE CARGA
