@@ -253,7 +253,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>positiveReport.html</h1>
-    <p>Report generated on 18-Mar-2023 at 13:30:19 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 18-Mar-2023 at 15:57:30 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -269,8 +269,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.10.5</td></tr></table>
     <h2>Summary</h2>
-    <p>0 tests ran in 0.04 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">4 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>4 tests ran in 66.84 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">4 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -281,39 +281,45 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="error results-table-row">
+      <tbody class="passed results-table-row">
         <tr>
-          <td class="col-result">Error</td>
-          <td class="col-name">tests/test_login_positive.py::TestPositiveScenarios::test_positive_login[chrome-standard_user-secret_sauce]::setup</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">file C:\Users\juanc\Desktop\CrowdarChallenge\ChallengeCrowdar\tests\test_login_positive.py, line 8<br/>      @pytest.mark.login<br/>      @pytest.mark.positive<br/>      @pytest.mark.parametrize(&quot;username, passwords&quot;,[(&quot;standard_user&quot;, &quot;secret_sauce&quot;)])<br/>      def test_positive_login(self, driver,username,passwords):<br/>file C:\Users\juanc\Desktop\CrowdarChallenge\ChallengeCrowdar\tests\conftest.py, line 25<br/>  @pytest.fixture(autouse=True)<br/>  def screenshot_on_failure(request, browser):<br/><span class="error">E       fixture &#x27;browser&#x27; not found</span><br/>&gt;       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, driver, extra, include_metadata_in_junit_xml, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, screenshot_on_failure, testrun_uid, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, worker_id<br/>&gt;       use &#x27;pytest --fixtures [testpath]&#x27; for help on them.<br/><br/>C:\Users\juanc\Desktop\CrowdarChallenge\ChallengeCrowdar\tests\conftest.py:25<br/></div></td></tr></tbody>
-      <tbody class="error results-table-row">
-        <tr>
-          <td class="col-result">Error</td>
-          <td class="col-name">tests/test_login_positive.py::TestPositiveScenarios::test_positive_login[brave-standard_user-secret_sauce]::setup</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login_positive.py::TestPositiveScenarios::test_positive_login[chrome-standard_user-secret_sauce]</td>
+          <td class="col-duration">10.49</td>
+          <td class="col-links"><a class="url" href="https://www.saucedemo.com/" target="_blank">URL</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">file C:\Users\juanc\Desktop\CrowdarChallenge\ChallengeCrowdar\tests\test_login_positive.py, line 8<br/>      @pytest.mark.login<br/>      @pytest.mark.positive<br/>      @pytest.mark.parametrize(&quot;username, passwords&quot;,[(&quot;standard_user&quot;, &quot;secret_sauce&quot;)])<br/>      def test_positive_login(self, driver,username,passwords):<br/>file C:\Users\juanc\Desktop\CrowdarChallenge\ChallengeCrowdar\tests\conftest.py, line 25<br/>  @pytest.fixture(autouse=True)<br/>  def screenshot_on_failure(request, browser):<br/><span class="error">E       fixture &#x27;browser&#x27; not found</span><br/>&gt;       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, driver, extra, include_metadata_in_junit_xml, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, screenshot_on_failure, testrun_uid, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, worker_id<br/>&gt;       use &#x27;pytest --fixtures [testpath]&#x27; for help on them.<br/><br/>C:\Users\juanc\Desktop\CrowdarChallenge\ChallengeCrowdar\tests\conftest.py:25<br/></div></td></tr></tbody>
-      <tbody class="error results-table-row">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Creating chrome driver
+<br/> ------------------------------Captured stdout call------------------------------ <br/>Login was correctly done
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
         <tr>
-          <td class="col-result">Error</td>
-          <td class="col-name">tests/test_login_positive.py::TestPositiveScenarios::test_positive_add[chrome-standard_user-secret_sauce-juan-munoz-7000]::setup</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">file C:\Users\juanc\Desktop\CrowdarChallenge\ChallengeCrowdar\tests\test_login_positive.py, line 34<br/>      @pytest.mark.login<br/>      @pytest.mark.positive<br/>      @pytest.mark.parametrize(&quot;username, passwords, name, last_name, postal_code&quot;,[(&quot;standard_user&quot;, &quot;secret_sauce&quot;, &quot;juan&quot;, &quot;munoz&quot;, &quot;7000&quot;)])<br/>      def test_positive_add(self, driver,username,passwords,name,last_name,postal_code):<br/>file C:\Users\juanc\Desktop\CrowdarChallenge\ChallengeCrowdar\tests\conftest.py, line 25<br/>  @pytest.fixture(autouse=True)<br/>  def screenshot_on_failure(request, browser):<br/><span class="error">E       fixture &#x27;browser&#x27; not found</span><br/>&gt;       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, driver, extra, include_metadata_in_junit_xml, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, screenshot_on_failure, testrun_uid, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, worker_id<br/>&gt;       use &#x27;pytest --fixtures [testpath]&#x27; for help on them.<br/><br/>C:\Users\juanc\Desktop\CrowdarChallenge\ChallengeCrowdar\tests\conftest.py:25<br/></div></td></tr></tbody>
-      <tbody class="error results-table-row">
-        <tr>
-          <td class="col-result">Error</td>
-          <td class="col-name">tests/test_login_positive.py::TestPositiveScenarios::test_positive_add[brave-standard_user-secret_sauce-juan-munoz-7000]::setup</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login_positive.py::TestPositiveScenarios::test_positive_login[brave-standard_user-secret_sauce]</td>
+          <td class="col-duration">10.56</td>
+          <td class="col-links"><a class="url" href="https://www.saucedemo.com/" target="_blank">URL</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">file C:\Users\juanc\Desktop\CrowdarChallenge\ChallengeCrowdar\tests\test_login_positive.py, line 34<br/>      @pytest.mark.login<br/>      @pytest.mark.positive<br/>      @pytest.mark.parametrize(&quot;username, passwords, name, last_name, postal_code&quot;,[(&quot;standard_user&quot;, &quot;secret_sauce&quot;, &quot;juan&quot;, &quot;munoz&quot;, &quot;7000&quot;)])<br/>      def test_positive_add(self, driver,username,passwords,name,last_name,postal_code):<br/>file C:\Users\juanc\Desktop\CrowdarChallenge\ChallengeCrowdar\tests\conftest.py, line 25<br/>  @pytest.fixture(autouse=True)<br/>  def screenshot_on_failure(request, browser):<br/><span class="error">E       fixture &#x27;browser&#x27; not found</span><br/>&gt;       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, driver, extra, include_metadata_in_junit_xml, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, screenshot_on_failure, testrun_uid, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, worker_id<br/>&gt;       use &#x27;pytest --fixtures [testpath]&#x27; for help on them.<br/><br/>C:\Users\juanc\Desktop\CrowdarChallenge\ChallengeCrowdar\tests\conftest.py:25<br/></div></td></tr></tbody></table></body></html>
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Creating brave driver
+<br/> ------------------------------Captured stdout call------------------------------ <br/>Login was correctly done
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login_positive.py::TestPositiveScenarios::test_positive_add[chrome-standard_user-secret_sauce-juan-munoz-7000]</td>
+          <td class="col-duration">18.73</td>
+          <td class="col-links"><a class="url" href="https://www.saucedemo.com/" target="_blank">URL</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Creating chrome driver
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login_positive.py::TestPositiveScenarios::test_positive_add[brave-standard_user-secret_sauce-juan-munoz-7000]</td>
+          <td class="col-duration">18.89</td>
+          <td class="col-links"><a class="url" href="https://www.saucedemo.com/" target="_blank">URL</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Creating brave driver
+<br/></div></td></tr></tbody></table></body></html>
